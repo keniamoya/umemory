@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href='https://fonts.googleapis.com/css?family=Changa' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet" />
+    <title>UMemory</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-fluid">
+            <div class="text-center title">
+                <p id="namePlayer" class="textContact">{{Nombre}}</p>
+                <button class="btn btn-success" onclick="perfil()">Ver historial</button>
+                <button class="btn btn-success" onclick="resetScore()">Reiniciar</button>
+            </div>
+            <div class="row ">
+                <table class="table table-hover" id="tableRecords">
+                    <thead>
+                        <tr>
+                            <td class="column">
+                                <p class="name">Puntaje</p>
+                            </td>
+                            <td class="column">
+                                <p class="name">Nivel</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                </table>
+                <div id="divScoreTotal" class=" text-center score">
+                    <p id="scoreTotal" class="name column"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <hr>
+        <a href="menu.html"><i class="fa fa-arrow-left back" aria-hidden="true"></i></a>
+        <hr>
+    </div>
+
+    <script>
+        // Check browser support
+        if (typeof(Storage) !== "undefined") {
+            document.getElementById("namePlayer").innerHTML = localStorage.getItem("NOMBRE");
+        } else {
+            document.getElementById("namePlayer").innerHTML = "Se ha producido un error de conexión";
+        }
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+    <script src="js/perfil.js"></script>
+
+</body>
+
+
+
+</html>

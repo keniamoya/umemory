@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href='https://fonts.googleapis.com/css?family=Changa' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <link href="css/style.css" rel="stylesheet" />
+    <title>UMemory</title>
+</head>
+
+
+
+<body>
+
+    <div class="container">
+        <div class="container2">
+            <button class="tablink2" onclick="openOption('level1', this, '#3d3a3a')" id="defaultOpen">Nivel 1</button>
+            <button class="tablink2" onclick="openOption('level2', this, '#3d3a3a')">Nivel 2</button>
+            <button class="tablink2" onclick="openOption('level3', this, '#3d3a3a')">Nivel 3</button>
+
+            <!-- Level 1 -->
+
+            <div id="level1" class="tabcontent">
+                <img src="img/level1.JPG">
+                <p class="textLevel">En este nivel deberá completar todas las parejas de cartas.</p>
+                <p class="textLevel">Por cada 2 intentos incorrectos se le hará una pregunta que debe responder inmediatamente.</p>
+                <p class="textLevel">Si lo hace de forma correcta se le otorgará 5 puntos a su calificación.</p>
+                <p class="textLevel"><b>Nota:</b> A partir de los 7 intentos incorrectos se preguntará cada vez que falle.</p>
+            </div>
+
+            <!-- Level 2 -->
+
+            <div id="level2" class="tabcontent">
+                <img src="img/level2.JPG">
+                <p class="textLevel">En este nivel deberá completar todas las parejas de cartas.</p>
+                <p class="textLevel">Si suma 3 intentos incorrectos se le hará una pregunta que debe responder inmediatamente.</p>
+                <p class="textLevel">Si lo hace de forma correcta se le otorgará 10 puntos a su calificación.</p>
+                <p class="textLevel"><b>Nota:</b> Al sumar 5 intentos incorrectos se le preguntará una vez, luego a los 7 y a partir de ahí por cada intento fallido.</p>
+            </div>
+
+            <!-- Level 23 -->
+
+            <div id="level3" class="tabcontent">
+                <img src="img/level3.JPG">
+                <p class="textLevel">En este nivel deberá completar todas las parejas de cartas.</p>
+                <p class="textLevel">Si suma 4 intentos incorrectos se le hará una pregunta que debe responder inmediatamente.</p>
+                <p class="textLevel">Si lo hace de forma correcta se le otorgará 15 puntos a su calificación.</p>
+                <p class="textLevel"><b>Nota:</b> Al sumar 6 intentos incorrectos se le preguntará una vez, luego a los 8 y a partir de ahí por cada intento fallido.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <hr>
+        <a href="menu.html"><i class="fa fa-arrow-left back" aria-hidden="true"></i></a>
+        <hr>
+    </div>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+    <script src="js/levels.js"></script>
+</body>
+
+</html>

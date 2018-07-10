@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umemory</title>
+    <meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
+    <meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+
+</head>
+
+<body>
+    <div class=" row ">
+        <!-- Codrops top bar -->
+        <div class="main clearfix">
+            <nav id="menu" class="nav">
+                <ul>
+                    <li>
+                        <a href="perfil.html">
+                            <span class="icon">
+                                <i class="fas fa-user-alt fa-3x"></i>
+                            </span>
+                            <span>Perfil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="levels.html">
+                            <span class="icon">
+									<i class="fas fa-chart-bar fa-3x"></i>
+								</span>
+                            <span>Niveles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="selectLevel.html">
+                            <span class="icon">
+									<i aria-hidden="true" class="fas fa-play-circle fa-3x"></i>
+								</span>
+                            <span>Jugar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <span class="icon">
+									<i aria-hidden="true" class="fas fa-envelope fa-3x"></i>
+								</span>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="exit.html">
+                            <span class="icon">
+                                    <i aria-hidden="true" class="fas fa-sign-out-alt fa-3x"></i></i>
+                                    </span>
+                            <span>Salir</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- /container -->
+    <script>
+        //  The function to change the class
+        var changeClass = function(r, className1, className2) {
+            var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+            if (regex.test(r.className)) {
+                r.className = r.className.replace(regex, ' ' + className2 + ' ');
+            } else {
+                r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
+            }
+            return r.className;
+        };
+
+        //  Creating our button in JS for smaller screens
+        var menuElements = document.getElementById('menu');
+        menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+        //esto es una prueba
+        //  Toggle the class on click to show / hide the menu
+        document.getElementById('menutoggle').onclick = function() {
+            changeClass(this, 'navtoogle active', 'navtoogle');
+        }
+
+        // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+        document.onclick = function(e) {
+            var mobileButton = document.getElementById('menutoggle'),
+                buttonStyle = mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+            if (buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+                changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+            }
+        }
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+    <script src="js/perfil.js"></script>
+</body>
+
+</html>

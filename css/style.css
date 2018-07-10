@@ -1,0 +1,315 @@
+.loader {
+    width: 150px;
+    height: 150px;
+    margin: 40px auto;
+    transform: rotate(-45deg);
+    font-size: 0;
+    line-height: 0;
+    animation: rotate-loader 5s infinite;
+    padding: 25px;
+    border: 1px solid teal;
+}
+
+.loader .loader-inner {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+}
+
+.loader .loading {
+    position: absolute;
+    background: teal;
+}
+
+.loader .one {
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    animation: loading-one 1s infinite;
+}
+
+.loader .two {
+    width: 0;
+    height: 100%;
+    left: 0;
+    animation: loading-two 1s infinite;
+    animation-delay: 0.25s;
+}
+
+.loader .three {
+    width: 0;
+    height: 100%;
+    right: 0;
+    animation: loading-two 1s infinite;
+    animation-delay: 0.75s;
+}
+
+.loader .four {
+    width: 100%;
+    top: 0;
+    height: 0;
+    animation: loading-one 1s infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes loading-one {
+    0% {
+        height: 0;
+        opacity: 1;
+    }
+    12.5% {
+        height: 100%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes loading-two {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+    12.5% {
+        width: 100%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes rotate-loader {
+    0% {
+        transform: rotate(-45deg);
+    }
+    20% {
+        transform: rotate(-45deg);
+    }
+    25% {
+        transform: rotate(-135deg);
+    }
+    45% {
+        transform: rotate(-135deg);
+    }
+    50% {
+        transform: rotate(-225deg);
+    }
+    70% {
+        transform: rotate(-225deg);
+    }
+    75% {
+        transform: rotate(-315deg);
+    }
+    95% {
+        transform: rotate(-315deg);
+    }
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+
+
+/** body **/
+
+body {
+    background-color: #1c1818;
+    background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+    font-family: 'Shanti';
+    font-size: 22px;
+}
+
+.container1 {
+    margin-top: 11rem;
+}
+
+.text {
+    text-align: center;
+    color: darkcyan;
+}
+
+.container2 {
+    margin: 3rem 1rem;
+}
+
+
+/****** login *****/
+
+@media(min-width: 768px) {
+    .field-label-responsive {
+        padding-top: .5rem;
+        text-align: center;
+    }
+}
+
+
+/****** tabs login  *****/
+
+.tablink {
+    background-color: #9e9e9e85;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.2rem;
+    width: 10rem;
+    border: 0.1rem solid #3d3a3a;
+}
+
+.tablink:hover {
+    background-color: #3d3a3a;
+}
+
+.tablink:focus {
+    background-color: #3d3a3a;
+    border-color: #1c1818;
+    outline: none !important;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+#Login {
+    background-color: #9e9e9e85;
+    border: 0.1rem solid #3d3a3a;
+}
+
+#Register {
+    background-color: #9e9e9e85;
+    border: 0.1rem solid #3d3a3a;
+}
+
+.btn-success {
+    background-color: #3d3a3a;
+    border-color: #9e9e9e85;
+    font-size: 1.2rem;
+}
+
+.btn-success:hover {
+    background-color: #9e9e9e85;
+    border-color: #9e9e9e85;
+}
+
+.btn-success:active {
+    background-color: #3d3a3a !important;
+    border-color: #9e9e9e85 !important;
+}
+
+.btn-success:focus {
+    box-shadow: 0 0 0 0.2rem #9e9e9e85 !important;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.input {
+    box-shadow: 0 0 0 0.2rem #9e9e9e85 !important;
+}
+
+
+/***** levels ****/
+
+img {
+    width: 16.5rem;
+}
+
+#level1 {
+    background-color: #9e9e9e85;
+    border: 0.1rem solid #3d3a3a;
+}
+
+#level2 {
+    background-color: #9e9e9e85;
+    border: 0.1rem solid #3d3a3a;
+}
+
+#level3 {
+    background-color: #9e9e9e85;
+    border: 0.1rem solid #3d3a3a;
+}
+
+.tablink2 {
+    background-color: #9e9e9e85;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 0.1rem solid #3d3a3a;
+}
+
+.back {
+    color: white;
+}
+
+
+/***** contact ****/
+
+.img {
+    width: 5rem;
+}
+
+.textContact {
+    color: darkcyan;
+    font-size: 1.8rem;
+}
+
+.title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contacts {
+    margin-top: 2rem;
+}
+
+.name {
+    color: teal;
+    font-size: 1.2rem;
+}
+
+.column {
+    text-align: center;
+}
+
+.textLevel {
+    font-size: 1.2rem;
+}
+
+hr {
+    border-top: 1px solid rgb(61, 58, 58);
+}
+
+.table {
+    background-color: #00000061;
+}
+
+.question {
+    background-color: #00000061;
+    color: teal;
+    padding: 4rem;
+    text-align: justify;
+    display: none;
+}
+
+.levels {
+    background-color: #00000061;
+}
